@@ -2,12 +2,17 @@ import { GoogleSpreadsheet } from 'google-spreadsheet';
 import { JWT } from 'google-auth-library';
 
 // Google Sheets configuration
-const SHEET_ID = process.env.GOOGLE_SHEETS_SHEET_ID!;
-const CLIENT_EMAIL = process.env.GOOGLE_SHEETS_CLIENT_EMAIL!;
-const PRIVATE_KEY = process.env.GOOGLE_SHEETS_PRIVATE_KEY!.replace(/\\n/g, '\n');
+const SHEET_ID = process.env.GOOGLE_SHEETS_SHEET_ID || '';
+const CLIENT_EMAIL = process.env.GOOGLE_SHEETS_CLIENT_EMAIL || '';
+const PRIVATE_KEY = process.env.GOOGLE_SHEETS_PRIVATE_KEY?.replace(/\\n/g, '\n') || '';
 
 // Initialize the sheet
 async function getSheet() {
+  // Check if required environment variables are available
+  if (!SHEET_ID || !CLIENT_EMAIL || !PRIVATE_KEY) {
+    throw new Error('Missing Google Sheets configuration. Please check environment variables.');
+  }
+
   // Initialize JWT auth
   const serviceAccountAuth = new JWT({
     email: CLIENT_EMAIL,
