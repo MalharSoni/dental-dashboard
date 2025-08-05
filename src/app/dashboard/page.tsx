@@ -14,10 +14,7 @@ import {
   Clock,
   AlertCircle,
   TrendingUp,
-  TrendingDown,
-  Activity,
-  Users,
-  Star
+  Activity
 } from "lucide-react";
 
 interface DashboardStats {
@@ -137,7 +134,7 @@ export default function DashboardPage() {
               Good morning, <span className="text-gradient">Dr. Smith</span>
             </h1>
             <p className="text-gray-600 text-lg">
-              Here's what's happening at your practice today
+              Here&apos;s what&apos;s happening at your practice today
             </p>
           </div>
           <div className="text-right">
@@ -159,7 +156,7 @@ export default function DashboardPage() {
         <div className="card-modern group overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 relative z-10">
-            <CardTitle className="text-sm font-semibold text-gray-600">Today's Appointments</CardTitle>
+            <CardTitle className="text-sm font-semibold text-gray-600">Today&apos;s Appointments</CardTitle>
             <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
               <Calendar className="h-5 w-5 text-white" />
             </div>
@@ -195,7 +192,7 @@ export default function DashboardPage() {
         <div className="card-modern group overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 relative z-10">
-            <CardTitle className="text-sm font-semibold text-gray-600">Today's Revenue</CardTitle>
+            <CardTitle className="text-sm font-semibold text-gray-600">Today&apos;s Revenue</CardTitle>
             <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
               <DollarSign className="h-5 w-5 text-white" />
             </div>
@@ -291,7 +288,7 @@ export default function DashboardPage() {
         <div className="card-modern">
           <CardHeader className="border-b border-gray-100/50">
             <div className="flex items-center justify-between">
-              <CardTitle className="text-xl font-bold text-gray-900">Today's Schedule</CardTitle>
+              <CardTitle className="text-xl font-bold text-gray-900">Today&apos;s Schedule</CardTitle>
               <Button variant="outline" size="sm" className="text-blue-600 border-blue-200 hover:bg-blue-50">
                 View All
               </Button>
