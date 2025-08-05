@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function TestPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-green-50">
@@ -9,7 +11,7 @@ export default function TestPage() {
           Your dental dashboard is deployed and working!
         </p>
         <div className="bg-white p-4 rounded-lg shadow-sm mb-6">
-          <h2 className="font-semibold text-gray-800 mb-2">What's Working:</h2>
+          <h2 className="font-semibold text-gray-800 mb-2">What&apos;s Working:</h2>
           <div className="text-sm text-gray-600 space-y-1">
             <div>✅ Next.js deployment</div>
             <div>✅ Environment variables</div>
@@ -18,12 +20,12 @@ export default function TestPage() {
           </div>
         </div>
         <div className="space-y-2">
-          <a href="/" className="block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          <Link href="/" className="block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
             ← Back to Home
-          </a>
-          <a href="/overview" className="block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+          </Link>
+          <Link href="/overview" className="block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
             Go to Dashboard →
-          </a>
+          </Link>
         </div>
       </div>
     </div>
